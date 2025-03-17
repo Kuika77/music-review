@@ -1,15 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './estilos/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Descobrir from './paginas/descobrir';
+import lerUrl from './util/lerUrl';
+import { MostrarPagina } from './util/mostrarPagina';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+/*console.log("URL: " + window.location.pathname);
+const pag = window.location.pathname;*/
 root.render(
   <React.StrictMode>
     <App />
+    <header>
+      <h1>Music Review</h1>
+    </header>
+    <main>
+      {MostrarPagina()}
+      {/*lerUrl() === '/?p=1' ? <App /> : <Descobrir />*/}
+    </main>
+    <footer>
+      <p>Copyright &copy; 2025</p>
+    </footer>
   </React.StrictMode>
 );
 
